@@ -7,17 +7,17 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 public class BMICalcTest {
-	BMICalcImpl calc;
+	static BMICalcImpl calc;
 	
 	@BeforeAll
-	public void loadCalc() {
+	public static void loadCalc() {
 		calc = new BMICalcImpl();
 	}
 	
 	@ParameterizedTest
     @ValueSource(doubles = {1.5, 2.0, 3.2, 4.0, 10.5})
 	public void bmiPositiveReals(double value) {
-		assertEquals(value / Math.sqrt(value*value), calc.bmi(value, value));
+		assertEquals(value / (value*value), calc.bmi(value, value));
 	}
 	
 	@ParameterizedTest

@@ -3,7 +3,7 @@ package bmicalc;
 public class BMICalcImpl implements BMICalc {
 
 	public double bmi(double mass, double height) {
-		return 0.0;
+		return mass / (height*height);
 	}
 
 	public String category(double bmi) {
