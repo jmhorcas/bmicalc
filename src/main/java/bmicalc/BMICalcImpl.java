@@ -19,7 +19,19 @@ public class BMICalcImpl implements BMICalc {
 	}
 
 	public String category(double bmi) {
-		return "";
+		String res;
+		
+		if (bmi < 18.5) {
+			res = "UNDERWEIGHT";
+		}else if (bmi >= 18.5 && bmi < 25) {
+			res = "NORMAL";
+		}else if (bmi >= 25 && bmi < 30) {
+			res = "OVERWEIGHT";
+		}else {
+			res = "OBESE";
+		}
+		
+		return res;
 	}
 
 	public boolean abdominalObesity(double waistCircumference, char gender) {

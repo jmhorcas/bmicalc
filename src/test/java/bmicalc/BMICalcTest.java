@@ -55,25 +55,25 @@ public class BMICalcTest {
 	// Tests for category
 
 	@ParameterizedTest
-	@ValueSource(doubles = { 0.0, 1.2, 3, 10.99, 18.49999 })
+	@ValueSource(doubles = {0.0, 1.2, 3, 10.99, 18.49999})
 	public void categoryUnderweight(double value) {
 		assertEquals("UNDERWEIGHT", calc.category(value));
 	}
 
 	@ParameterizedTest
-	@ValueSource(doubles = { 18.5, 20, 22.22, 24, 24.9999 })
+	@ValueSource(doubles = {18.5, 20, 22.22, 24, 24.9999})
 	public void categoryNormal(double value) {
 		assertEquals("NORMAL", calc.category(value));
 	}
 
 	@ParameterizedTest
-	@ValueSource(doubles = { 25, 26.26, 27, 28.99, 29.9999 })
+	@ValueSource(doubles = {25, 26.26, 27, 28.99, 29.9999})
 	public void categoryOverweight(double value) {
 		assertEquals("OVERWEIGHT", calc.category(value));
 	}
 
 	@ParameterizedTest
-	@ValueSource(doubles = { 0.0, 1.2, 3, 10.99, 18.49999 })
+	@ValueSource(doubles = {30, 31.2, 33.222, 40, 100})
 	public void categoryObese(double value) {
 		assertEquals("OBESE", calc.category(value));
 	}
