@@ -107,4 +107,19 @@ public class BMICalcTest {
 	public void abdominalFemaleFalse(double value) {
 		assertFalse(calc.abdominalObesity(value, 'F'));
 	}
+	
+	@Test
+	public void abdominalm() {
+		assertThrows(NullPointerException.class, () -> calc.abdominalObesity(91, 'm'));
+	}
+	
+	@Test
+	public void abdominalf() {
+		assertThrows(NullPointerException.class, () -> calc.abdominalObesity(91, 'f'));
+	}
+	
+	@Test
+	public void abdominalDifferent() {
+		assertThrows(NullPointerException.class, () -> calc.abdominalObesity(91, 'k'));
+	}
 }
