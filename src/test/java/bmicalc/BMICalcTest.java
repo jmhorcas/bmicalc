@@ -1,12 +1,11 @@
 package bmicalc;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 public class BMICalcTest {
 	static BMICalcImpl calc;
@@ -81,5 +80,31 @@ public class BMICalcTest {
 	@Test
 	public void categoryNegative() {
 		assertEquals("UNDERWEIGHT", calc.category(-1));
+	}
+	
+	// Tests for abdominalObesity
+	
+	@ParameterizedTest
+	@ValueSource(doubles = {90.001, 91, 98.99, 100, 103.254})
+	public void abdominalMaleTrue(double value) {
+		assertTrue(calc.abdominalObesity(value, 'M'));
+	}
+	
+	@ParameterizedTest
+	@ValueSource(doubles = {10, 20, 30.121, 89.999, 90})
+	public void abdominalMaleFalse(double value) {
+		assertFalse(calc.abdominalObesity(value, 'M'));
+	}
+	
+	@ParameterizedTest
+	@ValueSource(doubles = {80.001, 81, 90, 100, 103.254})
+	public void abdominalFemaleTrue(double value) {
+		assertTrue(calc.abdominalObesity(value, 'F'));
+	}
+	
+	@ParameterizedTest
+	@ValueSource(doubles = {10, 20, 30.121, 79.999, 80})
+	public void abdominalFemaleFalse(double value) {
+		assertFalse(calc.abdominalObesity(value, 'F'));
 	}
 }

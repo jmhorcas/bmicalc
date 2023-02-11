@@ -7,7 +7,7 @@ public class BMICalcImpl implements BMICalc {
 			throw new ArithmeticException();
 		}
 		
-		if (mass < 0) {
+		if (mass < 0) { 
 			mass = -mass;
 		}
 		
