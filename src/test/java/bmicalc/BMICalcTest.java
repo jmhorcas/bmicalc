@@ -77,4 +77,9 @@ public class BMICalcTest {
 	public void categoryObese(double value) {
 		assertEquals("OBESE", calc.category(value));
 	}
+	
+	@Test
+	public void categoryNegative() {
+		assertEquals("UNDERWEIGHT", calc.category(-1));
+	}
 }
