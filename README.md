@@ -3,27 +3,26 @@
 # BMI calculator
 A biomedical calculator for the body mass index (BMI) and other parameters.
 
-# Metodo bmi
-1.- Comprobar enviando 5 pares de numeros con decimales positivos
-2.- Comprobar enviando 5 pares de numeros sin decimales positivos
-3.- Comprobar enviando 5 pares de numeros con decimales negativos
-4.- Comprobar enviando 5 pares de numeros sin decimales negativos
-5.- Comprobar que se pase mass = 0 (Deberia dar 0)
-6.- Comprobar que se pase height = 0 (Deberia ocurrir error)
+# Method bmi
+1.- Check 5 positive even float numbers
+2.- Check 5 positive even int numbers
+3.- Check 5 negative even float numbers
+4.- Check 5 negative even int numbers
+5.- Check when mass = 0 (It should be zero)
+6.- Check when height = 0 (It should be error)
 
-# Metodo category
-1.- Comprobar 5 bmi que deban dar UNDERWEIGHT (Comprobando los casos limites, incluyendo con y sin decimales)
-2.- Comprobar 5 bmi que deban dar NORMAL (Comprobando los casos limites, incluyendo con y sin decimales)
-3.- Comprobar 5 bmi que deban dar OVERWEIGHT (Comprobando los casos limites, incluyendo con y sin decimales)
-4.- Comprobar 5 bmi que deban dar OBESE (Comprobando los casos limites, incluyendo con y sin decimales)
-5.- Comprobar enviar un numero negativo (Deberia dar UNDERWEIGHT)
-6.- Comprobar enviar un cero (Deberia dar UNDERWEIGHT)
+# Method category
+1.- Check 5 bmi for UNDERWEIGHT
+2.- Check 5 bmi for NORMAL
+3.- Check 5 bmi for OVERWEIGHT
+4.- Check 5 bmi for OBESE
+5.- Check a negative bmi (It should be UNDERWEIGHT)
 
-# Metodo abdominalObesity
-1.- Comprobar enviar 'M'  y 5 waistCircumference para que de TRUE
-2.- Comprobar enviar 'M'  y 5 waistCircumference para que de FALSE
-3.- Comprobar enviar 'F'  y 5 waistCircumference para que de TRUE
-4.- Comprobar enviar 'M'  y 5 waistCircumference para que de FALSE
-5.- Comprobar que pasa si envio una 'm'
-6.- Comprobar que pasa si envio una 'f'
-7.- Comprabar que pasa si envio una letra distinto a M o F
+# Method abdominalObesity
+1.- Check 'M' with 5 waistCircumference that give TRUE     
+2.- Check 'M' with 5 waistCircumference that give FALSE  
+3.- Check 'F' with 5 waistCircumference that give TRUE  
+4.- Check 'F' with 5 waistCircumference that give FALSE  
+5.- Check 'm' 
+6.- Check 'f' 
+7.- Check a character different that 'F' and 'M'

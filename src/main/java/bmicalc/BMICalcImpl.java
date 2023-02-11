@@ -7,6 +7,8 @@ public class BMICalcImpl implements BMICalc {
 			throw new ArithmeticException();
 		}
 		
+		// A mass or height negative don't make sense so I change it because I suppose an error introducing
+		// the inputs
 		if (mass < 0) { 
 			mass = -mass;
 		}
