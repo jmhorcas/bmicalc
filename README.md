@@ -37,3 +37,4 @@ Check the funcionality of the abdominalObesity() method by using AssertTrue()
 Check the funcionality of the abdominalObesity() method by using AssertFalse()
 
 # Test 12
+It throws an IllegalArgumentException when the gender is different to M or F. 
