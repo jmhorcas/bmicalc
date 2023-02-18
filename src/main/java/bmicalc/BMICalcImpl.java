@@ -8,9 +8,10 @@ public class BMICalcImpl implements BMICalc {
 
 	public String category(double bmi) {
 		String category = "";
-		if (bmi < 18.5) category = "underweight";
-		else if (18.5 <= bmi && bmi <= 24.9) category = "normal";
-		else if (25 <= bmi && bmi <= 29.9) category = "overweight";
+		if (bmi < 0) category = "Error: negative input";
+		else if (bmi < 18.5) category = "underweight";
+		else if (18.5 <= bmi && bmi < 25) category = "normal";
+		else if (25 <= bmi && bmi < 30) category = "overweight";
 		else if (bmi >= 30) category = "obese";
 
 		return category;
