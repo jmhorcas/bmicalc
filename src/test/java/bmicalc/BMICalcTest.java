@@ -99,5 +99,44 @@ public class BMICalcTest {
 		obesity = calc.abdominalObesity(80, 'F');
 		assertFalse(obesity);
 	}
+
+	@Test
+	public void bmiTest() {
+		BMICalcImpl calc = new BMICalcImpl();
+		double mass = 50;
+		double height = 1.50;
+		double bmi = calc.bmi(mass, height);
+		double expected = mass / Math.pow(height, 2);
+		assertEquals(bmi, expected);
+	}
+
+	@Test
+	public void bmiNegativeMassTest() {
+		BMICalcImpl calc = new BMICalcImpl();
+		double mass = -50;
+		double height = 1.50;
+		double bmi = calc.bmi(mass, height);
+		double expected = -mass / Math.pow(height, 2);
+		assertEquals(bmi, expected);
+	}
+
+	@Test
+	public void bmiNegativeHeightTest() {
+		BMICalcImpl calc = new BMICalcImpl();
+		double mass = 50;
+		double height = -1.50;
+		double bmi = calc.bmi(mass, height);
+		double expected = mass / Math.pow(height, 2);
+		assertEquals(bmi, expected);
+	}
+
+	@Test
+	public void bmiHeightEqualsToZeroTest() {
+		BMICalcImpl calc = new BMICalcImpl();
+		double mass = 50;
+		double height = 0;
+		double bmi = calc.bmi(mass, height);
+		assertEquals(bmi, Double.POSITIVE_INFINITY);
+	}
 	
 }

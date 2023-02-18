@@ -16,3 +16,8 @@ negativeMaleAbdominalObesity: comprueba que para valores por debajo de 90 el res
 positiveFemaleAbdominalObesityTest: comprueba que para valores por encima de 80 el resultado es positivo en mujeres.
 negativeFemaleAbdominalObesity: comprueba que para valores por debajo de 80 el resultado es negativo en mujeres.
 
+bmiTest: comprueba que la ecuación se realiza de forma correcta.
+bmiNegativeMassTest: comprueba que se utiliza el valor absoluto de la masa.
+bmiNegativeHeightTest: comprueba que no hay problema si la altura es negativa (va al cuadrado).
+bmiHeightEqualsToZeroTest: comprueba que en caso de dividir por cero el resultado es infinito (función de Math.pow).
+
