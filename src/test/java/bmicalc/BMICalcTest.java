@@ -1,6 +1,8 @@
 package bmicalc;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -64,6 +66,38 @@ public class BMICalcTest {
 			String category = calc.category(nums[i]);
 			assertEquals(category, "obese");
 		}
+	}
+
+	@Test
+	public void positiveMaleAbdominalObesityTest() {
+		BMICalcImpl calc = new BMICalcImpl();
+		boolean obesity = calc.abdominalObesity(95, 'M');
+		assertTrue(obesity);
+	}
+
+	@Test
+	public void negativeMaleAbdominalObesityTest() {
+		BMICalcImpl calc = new BMICalcImpl();
+		boolean obesity = calc.abdominalObesity(80, 'M');
+		assertFalse(obesity);
+		obesity = calc.abdominalObesity(90, 'M');
+		assertFalse(obesity);
+	}
+
+	@Test
+	public void positiveFemaleAbdominalObesityTest() {
+		BMICalcImpl calc = new BMICalcImpl();
+		boolean obesity = calc.abdominalObesity(85, 'F');
+		assertTrue(obesity);
+	}
+
+	@Test
+	public void negativeFemaleAbdominalObesityTest() {
+		BMICalcImpl calc = new BMICalcImpl();
+		boolean obesity = calc.abdominalObesity(70, 'F');
+		assertFalse(obesity);
+		obesity = calc.abdominalObesity(80, 'F');
+		assertFalse(obesity);
 	}
 	
 }
