@@ -40,15 +40,26 @@ public class BMICalcTest {
 		assertTimeout(Duration.ofSeconds(1), () -> number.bmi(56, 1.56));
 	}
 	
-	
 	@Test
-	@DisplayName("Example bmi")
+	@DisplayName("Example 5")
 	public void bmiObesity() {
 		assertEquals("UNDERWEIGHT", number.category(17));
 		
 	}
 	
+	@Test
+	@DisplayName("Example 6")
+	public void bmiObesity2() {
+		assertNotEquals("NORMAL", number.category(26));
+		
+	}
 	
+	@Test
+	@DisplayName("Example 7")
+	public void bmiObesity3() {
+		assertThrows(RuntimeException.class, () -> number.category(0));
+		
+	}
 	
 	/**
 	 * double a = Math.random();
