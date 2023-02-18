@@ -1,16 +1,21 @@
 package bmicalc;
 
+import java.util.concurrent.TimeUnit;
+
 public class BMICalcImpl implements BMICalc {
 
 	public double bmi(double mass, double height) {
 		if (mass <= 0 || height <= 0) {
-			throw new ArithmeticException("Los valores no pueden ser negativos");
+			throw new ArithmeticException("Values cannot be a zero or a negative number");
 		}
 		double bmi = mass / (Math.pow(height, 2));
 		return bmi;
 	}
 
-	public String category(double bmi) {
+	public String category(double bmi){
+		if (bmi == 0 || bmi < 0) {
+			throw new RuntimeException("BMI cannot be a zero or a negative number");
+		}
 		if (bmi < 18.5) {
 			return "UNDERWEIGHT";
 		} else if(bmi > 18.5 && bmi < 24.9) {

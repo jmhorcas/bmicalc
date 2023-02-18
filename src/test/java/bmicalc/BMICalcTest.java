@@ -3,33 +3,48 @@ package bmicalc;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTimeout;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import java.time.*;
 
 public class BMICalcTest {
 	
-	private BMICalcImpl bmi = new BMICalcImpl();
+	private BMICalcImpl number = new BMICalcImpl();
 	
 	
-	@Test
-	@DisplayName("Example")
-	public void bmiCalculation() {
-		assertThrows(ArithmeticException.class, () -> bmi.bmi(58, 0));
+	@Test 
+	@DisplayName("Test 1")
+	public void bmiCalculation2(){
+		
+		assertEquals(56/(Math.pow(1.56, 2)), number.bmi(56, 1.56));
 	}
 	
 	@Test 
-	@DisplayName("Comprobar funcionamiento cálculo BMI")
-	public void bmiCalculation2(){
+	@DisplayName("Test 2")
+	public void bmiCalculation3(){
 		
-		assertEquals(56/(Math.pow(1.56, 2)), bmi.bmi(56, 1.56));
+		assertNotEquals(48/(Math.pow(1.52, 2)), number.bmi(56, 1.56));
+	}
+	
+	@Test
+	@DisplayName("Test 3")
+	public void bmiCalculation() {
+		assertThrows(ArithmeticException.class, () -> number.bmi(58, 0));
+	}
+	
+	@Test 
+	@DisplayName("Test 4")
+	public void bmiCalculationtimeNotexceeded(){
+		assertTimeout(Duration.ofSeconds(1), () -> number.bmi(56, 1.56));
 	}
 	
 	
 	@Test
 	@DisplayName("Example bmi")
 	public void bmiObesity() {
-		assertEquals("UNDERWEIGHT", bmi.category(17));
+		assertEquals("UNDERWEIGHT", number.category(17));
 		
 	}
 	
