@@ -1,6 +1,6 @@
 package bmicalc;
 
-import java.util.concurrent.TimeUnit;
+import org.junit.jupiter.params.aggregator.ArgumentAccessException;
 
 public class BMICalcImpl implements BMICalc {
 
@@ -28,6 +28,9 @@ public class BMICalcImpl implements BMICalc {
 	}
 
 	public boolean abdominalObesity(double waistCircumference, char gender) {
+		if (gender != 'F' || gender != 'M') {
+			throw new IllegalArgumentException("That value is not possible");
+		}
 		if (waistCircumference > 80 && gender == 'F') {
 			return true;
 		} else if (waistCircumference > 90 && gender == 'M'){
