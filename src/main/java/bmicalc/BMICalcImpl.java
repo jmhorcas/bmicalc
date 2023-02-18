@@ -19,7 +19,10 @@ public class BMICalcImpl implements BMICalc {
 	}
 
 	public boolean abdominalObesity(double waistCircumference, char gender) {
-		return false;
+		boolean hasObesity = false;
+		if (gender == 'M' && waistCircumference > 90) hasObesity = true;
+		else if (gender == 'F' && waistCircumference > 80) hasObesity = true;
+		return hasObesity;
 	}
 
 }
