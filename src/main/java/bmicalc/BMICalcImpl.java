@@ -3,13 +3,13 @@ package bmicalc;
 public class BMICalcImpl implements BMICalc {
 
 	public double bmi(double mass, double height) {
-		if (mass <= 0 || height <= 0) throw new ArithmeticException("No puedes introducir valores nulos o negativos");
+		if (mass <= 0 || height <= 0) throw new IllegalArgumentException("No puedes introducir valores nulos o negativos");
 		else if (mass > height * 100) throw new ArithmeticException("Relación masa altura irreal");
 		return mass / Math.pow(height, 2);
 	}
 
 	public String category(double bmi) {
-		if (bmi < 0) throw new IllegalArgumentException("BMI no puede ser negativo");
+		if (bmi <= 0) throw new IllegalArgumentException("BMI no puede ser nulo o negativo");
 		String category = "";
 		
 		if (bmi < 18.5) category = "underweight";
@@ -22,12 +22,10 @@ public class BMICalcImpl implements BMICalc {
 	}
 
 	public boolean abdominalObesity(double waistCircumference, char gender) {
-		if (waistCircumference <= 0) throw new ArithmeticException("No puedes introducir valores nulos o negativos");
-		if (gender != 'M' && gender != 'F') throw new IllegalArgumentException("Género mal especificado, se esperaba 'M' o 'F'.");
+		if (waistCircumference <= 0) throw new IllegalArgumentException("No puedes introducir valores nulos o negativos");
+		if (gender != 'M' && gender != 'F') throw new IllegalArgumentException("Género mal especificado, se esperaba 'M' o 'F'");
 
-		boolean hasObesity = false;
-		if (gender == 'M' && waistCircumference > 90) hasObesity = true;
-		else if (gender == 'F' && waistCircumference > 80) hasObesity = true;
+		boolean hasObesity = (gender == 'M' && waistCircumference > 90 || gender == 'F' && waistCircumference > 80) ? true:false;
 		return hasObesity;
 	}
 
