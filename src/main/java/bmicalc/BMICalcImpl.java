@@ -7,14 +7,8 @@ public class BMICalcImpl implements BMICalc {
 			throw new ArithmeticException();
 		}
 		
-		// A mass or height negative don't make sense so I change it because I suppose an error introducing
-		// the inputs
-		if (mass < 0) { 
-			mass = -mass;
-		}
-		
-		if (height < 0) {
-			height = -height;
+		if (mass < 0 || height < 0) { 
+			throw new NullPointerException();
 		}
 		
 		return mass / (height*height);
@@ -22,6 +16,10 @@ public class BMICalcImpl implements BMICalc {
 
 	public String category(double bmi) {
 		String res;
+		
+		if (bmi < 0) {
+			throw new NullPointerException();
+		}
 		
 		if (bmi < 18.5) {
 			res = "UNDERWEIGHT";
@@ -41,6 +39,10 @@ public class BMICalcImpl implements BMICalc {
 		
 		if (gender != 'M' && gender != 'F') {
 			throw new NullPointerException();
+		}
+		
+		if (waistCircumference < 0) {
+			throw new ArithmeticException();
 		}
 		
 		if (gender == 'M') {
