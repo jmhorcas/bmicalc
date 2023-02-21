@@ -107,6 +107,13 @@ public class BMICalcTest {
 	}
 
 	@Test
+	public void negativeInputAbdominalTest() {
+		BMICalcImpl calc = new BMICalcImpl();
+		assertThrows(IllegalArgumentException.class, ()->calc.abdominalObesity(-10, 'M'));
+		assertThrows(IllegalArgumentException.class, ()->calc.abdominalObesity(-1200, 'F'));
+	}
+
+	@Test
 	public void wrongGenderAbdominalTest() {
 		BMICalcImpl calc = new BMICalcImpl();
 		assertThrows(IllegalArgumentException.class, ()->calc.abdominalObesity(70, 'C'));

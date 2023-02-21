@@ -14,7 +14,8 @@ positiveMaleAbdominalObesityTest: comprueba que para valores por encima de 90 el
 negativeMaleAbdominalObesity: comprueba que para valores por debajo de 90 el resultado es negativo en hombres.
 positiveFemaleAbdominalObesityTest: comprueba que para valores por encima de 80 el resultado es positivo en mujeres.
 negativeFemaleAbdominalObesity: comprueba que para valores por debajo de 80 el resultado es negativo en mujeres.
-zeroAbdominalTest: comprueba que se lanza una excepción con una circunferencia menor o igual a 0.
+zeroAbdominalTest: comprueba que se lanza una excepción con una circunferencia igual a 0.
+negativeInputAbdominalTest: comprueba que se lanza una excepción con una circunferencia menor que 0.
 wrongGenderAbdominalTest: comprueba que se lanza una excepción con un género mal indicado.
 
 bmiTest: comprueba que la ecuación se realiza de forma correcta.
