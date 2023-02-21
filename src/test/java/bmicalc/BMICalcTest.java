@@ -7,17 +7,32 @@ import org.junit.jupiter.api.Test;
 
 public class BMICalcTest {
 	
+	
+	
 	@Test
 	@DisplayName("bmi_1")
 	public void bmi_1() {
 		BMICalcImpl c = new BMICalcImpl();
-		assertEquals(c.bmi(0, 0), 0);
+		boolean thrown = false;
+		try {
+			c.bmi(0, 0);
+		}catch(ArithmeticException e) {
+			thrown = true ;
+		}
+		assertEquals(thrown,true);	
 	}
 	@Test
 	@DisplayName("bmi_2")
 	public void bmi_2() {
 		BMICalcImpl c = new BMICalcImpl();
-		assertEquals(c.bmi(-1, -1), 0);
+		boolean thrown = false;
+		try {
+			c.bmi(-1, -1);
+		}catch(ArithmeticException e) {
+			thrown = true ;
+		}
+		assertEquals(thrown,true);	
+		
 	}
 	@Test
 	@DisplayName("bmi_3")
@@ -77,19 +92,39 @@ public class BMICalcTest {
 	@DisplayName("admObsty_12")
 	public void bmi_12() {
 		BMICalcImpl c = new BMICalcImpl();
-		assertEquals(c.abdominalObesity(0, 'M'), false);
+		boolean thrown = false;
+		try {
+			c.abdominalObesity(0, 'M');
+		}catch(RuntimeException e) {
+			thrown = true ;
+		}
+		assertEquals(thrown,true);	
+		
 	}
 	@Test
 	@DisplayName("admObsty_13")
 	public void bmi_13() {
 		BMICalcImpl c = new BMICalcImpl();
-		assertEquals(c.abdominalObesity(-1, 'M'), false);
+		boolean thrown = false;
+		try {
+			c.abdominalObesity(-1, 'M');
+		}catch(RuntimeException e) {
+			thrown = true ;
+		}
+		assertEquals(thrown,true);	
 	}
 	@Test
 	@DisplayName("admObsty_14")
 	public void bmi_14() {
 		BMICalcImpl c = new BMICalcImpl();
-		assertEquals(c.abdominalObesity(0, 'G'), false);
+		boolean thrown = false;
+		try {
+			c.abdominalObesity(80, 'G');
+		}catch(RuntimeException e) {
+			thrown = true ;
+		}
+		assertEquals(thrown,true);	
+		
 	}
 	@Test
 	@DisplayName("admObsty_15")

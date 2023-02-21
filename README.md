@@ -5,8 +5,8 @@ A biomedical calculator for the body mass index (BMI) and other parameters.
 
 MÉTODO bmi :
 
-1.Comprobar que cuando la masa o la altura es 0 lanza error
-2.Comprobar que cuando la masa o la altura es <0 lanza error
+1.Comprobar que cuando la masa o la altura es 0 devuelve error
+2.Comprobar que cuando la masa o la altura es <0 devuelve error
 3.Comprobación de un resultado conocido.Para 80Kg,1'8m =24.69
 
 MÉTODO categroty :
