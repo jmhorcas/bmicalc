@@ -17,41 +17,55 @@ public class BMICalcTest {
 
 	// Tests for bmi
 
-	@ParameterizedTest
-	@ValueSource(doubles = { 1.5, 2.0, 3.2, 4.0, 10.5 })
-	public void bmiPositiveReals(double value) {
-		assertEquals(value / (value * value), calc.bmi(value, value));
+	@Test
+	public void bmiPositiveReals() {
+		double mass = 60.5;
+		double height = 1.8;
+		assertEquals(mass / (height * height), calc.bmi(mass, height));
 	}
 
-	@ParameterizedTest
-	@ValueSource(ints = { 1, 2, 3, 4, 10 })
-	public void bmiPositiveInts(double value) {
-		assertEquals(value / (value * value), calc.bmi(value, value));
+	@Test
+	public void bmiPositiveInts() {
+		int mass = 60;
+		int height = 2;
+		assertEquals(mass / (height * height), calc.bmi(mass, height));
 	}
 
 	@Test
 	public void bmiNegativeMass() {
-		assertThrows(NullPointerException.class, () -> calc.bmi(-2, 4));
+		assertThrows(ArithmeticException.class, () -> calc.bmi(-2, 20));
 	}
 	
 	@Test
 	public void bmiNegativeHeight() {
-		assertThrows(NullPointerException.class, () -> calc.bmi(4, -2));
+		assertThrows(ArithmeticException.class, () -> calc.bmi(1.5, -2));
 	}
 	
 	@Test
 	public void bmiNegativeBoth() {
-		assertThrows(NullPointerException.class, () -> calc.bmi(-4, -2));
+		assertThrows(ArithmeticException.class, () -> calc.bmi(-4, -2));
 	}
 	
 	@Test
 	public void bmiMassZero() {
-		assertEquals(0, calc.bmi(0, 10));
+		assertThrows(ArithmeticException.class, () -> calc.bmi(0, 50));
 	}
 
 	@Test
 	public void bmiHeightZero() {
-		assertThrows(ArithmeticException.class, () -> calc.bmi(1, 0));
+		assertThrows(ArithmeticException.class, () -> calc.bmi(60, 0));
+	}
+	
+	@ParameterizedTest
+	@ValueSource(doubles = {0.3, 3})
+	public void bmiHeightOutOfBonds(double value) {
+		assertThrows(ArithmeticException.class, () -> calc.bmi(60, value));
+	}
+	
+	@ParameterizedTest
+	@ValueSource(doubles = {1, 650})
+	public void bmiMassOutOfBonds(double value) {
+		assertThrows(ArithmeticException.class, () -> calc.bmi(value, 1.7));
 	}
 
 	// Tests for category
@@ -82,7 +96,12 @@ public class BMICalcTest {
 	
 	@Test
 	public void categoryNegative() {
-		assertThrows(NullPointerException.class, () -> calc.category(-1));
+		assertThrows(ArithmeticException.class, () -> calc.category(-1));
+	}
+	
+	@Test
+	public void categoryBMIOutOfBonds() {
+		assertThrows(ArithmeticException.class, () -> calc.category(120));
 	}
 	
 	// Tests for abdominalObesity
@@ -94,7 +113,7 @@ public class BMICalcTest {
 	}
 	
 	@ParameterizedTest
-	@ValueSource(doubles = {10, 20, 30.121, 89.999, 90})
+	@ValueSource(doubles = {35, 40.1, 45.121, 89.999, 90})
 	public void abdominalMaleFalse(double value) {
 		assertFalse(calc.abdominalObesity(value, 'M'));
 	}
@@ -106,28 +125,34 @@ public class BMICalcTest {
 	}
 	
 	@ParameterizedTest
-	@ValueSource(doubles = {10, 20, 30.121, 79.999, 80})
+	@ValueSource(doubles = {35, 40.1, 45.121, 79.999, 80})
 	public void abdominalFemaleFalse(double value) {
 		assertFalse(calc.abdominalObesity(value, 'F'));
 	}
 	
 	@Test
 	public void abdominalm() {
-		assertThrows(NullPointerException.class, () -> calc.abdominalObesity(91, 'm'));
+		assertThrows(ArithmeticException.class, () -> calc.abdominalObesity(91, 'm'));
 	}
 	
 	@Test
 	public void abdominalf() {
-		assertThrows(NullPointerException.class, () -> calc.abdominalObesity(91, 'f'));
+		assertThrows(ArithmeticException.class, () -> calc.abdominalObesity(91, 'f'));
 	}
 	
 	@Test
 	public void abdominalDifferent() {
-		assertThrows(NullPointerException.class, () -> calc.abdominalObesity(91, 'k'));
+		assertThrows(ArithmeticException.class, () -> calc.abdominalObesity(91, 'k'));
 	}
 	
 	@Test
 	public void abdominalNegative() {
 		assertThrows(ArithmeticException.class, () -> calc.abdominalObesity(-5, 'F'));
+	}
+	
+	@ParameterizedTest
+	@ValueSource(doubles = {20, 400})
+	public void abdominalOutOfBonds(double value) {
+		assertThrows(ArithmeticException.class, () -> calc.abdominalObesity(value, 'F'));
 	}
 }

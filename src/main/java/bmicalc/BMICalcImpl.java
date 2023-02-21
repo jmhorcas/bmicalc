@@ -8,7 +8,11 @@ public class BMICalcImpl implements BMICalc {
 		}
 		
 		if (mass < 0 || height < 0) { 
-			throw new NullPointerException();
+			throw new ArithmeticException();
+		}
+		
+		if (height > 2.50 || height < 0.50 || mass > 635 || mass < 3) {
+			throw new ArithmeticException();
 		}
 		
 		return mass / (height*height);
@@ -18,7 +22,11 @@ public class BMICalcImpl implements BMICalc {
 		String res;
 		
 		if (bmi < 0) {
-			throw new NullPointerException();
+			throw new ArithmeticException();
+		}
+		
+		if (bmi > 106) {
+			throw new ArithmeticException();
 		}
 		
 		if (bmi < 18.5) {
@@ -38,10 +46,14 @@ public class BMICalcImpl implements BMICalc {
 		boolean res = false;
 		
 		if (gender != 'M' && gender != 'F') {
-			throw new NullPointerException();
+			throw new ArithmeticException();
 		}
 		
 		if (waistCircumference < 0) {
+			throw new ArithmeticException();
+		}
+		
+		if (waistCircumference < 33 || waistCircumference > 303) {
 			throw new ArithmeticException();
 		}
 		

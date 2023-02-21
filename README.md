@@ -11,6 +11,8 @@ A biomedical calculator for the body mass index (BMI) and other parameters.
 5.- Check a negative mass and height
 6.- Check when mass = 0 (It should be zero)
 7.- Check when height = 0 (It should be error)
+8.- Check an abnormal value of Height (It should be error)
+9.- Check an abnormal value of Mass (It should be error)
 
 # Method category
 1.- Check 5 bmi for UNDERWEIGHT
@@ -18,6 +20,7 @@ A biomedical calculator for the body mass index (BMI) and other parameters.
 3.- Check 5 bmi for OVERWEIGHT
 4.- Check 5 bmi for OBESE
 5.- Check a negative bmi (It should be error)
+6.- Check an abnormal value of bmi (It should be error)
 
 # Method abdominalObesity
 1.- Check 'M' with 5 waistCircumference that give TRUE     
@@ -28,3 +31,4 @@ A biomedical calculator for the body mass index (BMI) and other parameters.
 6.- Check 'f' (It should be error)
 7.- Check a character different that 'F' and 'M' (It should be error)
 8.- Check a negative waistCircumference (It should be error)
+9.- Check an abnormal value of waistCircumference (It should be error)
