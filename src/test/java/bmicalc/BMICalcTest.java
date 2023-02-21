@@ -2,6 +2,7 @@ package bmicalc;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.DisplayName;
@@ -24,7 +25,7 @@ public class BMICalcTest {
 	@Test
 	public void underweightCategoryTest() {
 		BMICalcImpl calc = new BMICalcImpl();
-		double[] nums = {0, 15, 18.49};
+		double[] nums = {15, 18.49};
 		for (int i = 0; i < nums.length; i++) {		
 			String category = calc.category(nums[i]);
 			assertEquals(category, "underweight");
@@ -33,9 +34,8 @@ public class BMICalcTest {
 
 	@Test
 	public void underweightNegativeCategoryTest() {
-		BMICalcImpl calc = new BMICalcImpl();	
-		String category = calc.category(-5);
-		assertEquals(category, "Error: negative input");
+		BMICalcImpl calc = new BMICalcImpl();
+		assertThrows(IllegalArgumentException.class, ()->calc.category(-5));
 	}
 
 	@Test
@@ -101,6 +101,18 @@ public class BMICalcTest {
 	}
 
 	@Test
+	public void zeroAbdominalTest() {
+		BMICalcImpl calc = new BMICalcImpl();
+		assertThrows(IllegalArgumentException.class, ()->calc.abdominalObesity(0, 'M'));
+	}
+
+	@Test
+	public void wrongGenderAbdominalTest() {
+		BMICalcImpl calc = new BMICalcImpl();
+		assertThrows(IllegalArgumentException.class, ()->calc.abdominalObesity(70, 'C'));
+	}
+
+	@Test
 	public void bmiTest() {
 		BMICalcImpl calc = new BMICalcImpl();
 		double mass = 50;
@@ -115,9 +127,7 @@ public class BMICalcTest {
 		BMICalcImpl calc = new BMICalcImpl();
 		double mass = -50;
 		double height = 1.50;
-		double bmi = calc.bmi(mass, height);
-		double expected = -mass / Math.pow(height, 2);
-		assertEquals(bmi, expected);
+		assertThrows(IllegalArgumentException.class, ()->calc.bmi(mass, height));
 	}
 
 	@Test
@@ -125,9 +135,7 @@ public class BMICalcTest {
 		BMICalcImpl calc = new BMICalcImpl();
 		double mass = 50;
 		double height = -1.50;
-		double bmi = calc.bmi(mass, height);
-		double expected = mass / Math.pow(height, 2);
-		assertEquals(bmi, expected);
+		assertThrows(IllegalArgumentException.class, ()->calc.bmi(mass, height));
 	}
 
 	@Test
@@ -135,8 +143,15 @@ public class BMICalcTest {
 		BMICalcImpl calc = new BMICalcImpl();
 		double mass = 50;
 		double height = 0;
-		double bmi = calc.bmi(mass, height);
-		assertEquals(bmi, Double.POSITIVE_INFINITY);
+		assertThrows(IllegalArgumentException.class, ()->calc.bmi(mass, height));
+	}
+
+	@Test
+	public void bmiIrrealest() {
+		BMICalcImpl calc = new BMICalcImpl();
+		double mass = 180;
+		double height = 1.50;
+		assertThrows(ArithmeticException.class, ()->calc.bmi(mass, height));
 	}
 	
 }
