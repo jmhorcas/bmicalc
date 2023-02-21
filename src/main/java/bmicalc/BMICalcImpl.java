@@ -8,12 +8,16 @@ public class BMICalcImpl implements BMICalc {
 	private char Female = 'F';
 
 	public double bmi(double mass, double height) {
+		if (height <= 0 || mass <= 0)
+			throw new RuntimeException("Weight or mass can not be under 0 or equal to 0");
 		this.mass = mass;
 		this.height = height;
 		return mass / (height * height);
 	}
 
 	public String category(double bmi) {
+		if (bmi <= 0)
+			throw new RuntimeException("bmi can not be under 0 or equal to 0");
 		if (bmi < 18.5) {
 			return "UNDERWEIGHT";
 		} else if (bmi < 25) {
