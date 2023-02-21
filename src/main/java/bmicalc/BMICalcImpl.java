@@ -1,17 +1,46 @@
 package bmicalc;
 
 public class BMICalcImpl implements BMICalc {
-
+    private double mass;
+    private double height;
+    
+    private char Male='M';
+    private char Female='F';
 	public double bmi(double mass, double height) {
-		return 0.0;
+        this.mass = mass;
+        this.height = height;
+        return mass / (height * height);
 	}
 
 	public String category(double bmi) {
-		return "";
+        if (bmi < 18.5) {
+            return "UNDERWEIGHT";
+        } else if (bmi < 25) {
+            return "NORMAL";
+        } else if (bmi < 30) {
+            return "OVERWEIGHT";
+        } else {
+            return "OBESE";
+        }
 	}
 
 	public boolean abdominalObesity(double waistCircumference, char gender) {
-		return false;
-	}
+		if (gender != Male || gender != Female) throw new RuntimeException("You must choose a gender: M or F");
+		if (waistCircumference <= 0) throw new RuntimeException("waistCircumference can not be under or equal to 0");
+		
+        if (gender == Male) {
+            if (waistCircumference < 102) {
+                return false;
+            } else {
+                return true;
+            }
+        } else{
+            if (waistCircumference < 88) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+        }
 
 }
