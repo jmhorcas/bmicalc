@@ -11,13 +11,14 @@ import org.junit.jupiter.api.Test;
 public class BMICalcTest {
 	
 	@Test
-	@DisplayName("Example Test Method.")
+	@DisplayName("BMI.")
 	public void bmi() {
 		BMICalcImpl a=new BMICalcImpl();
 		assertEquals(a.bmi(1,1), 1);
 	}
 	
 	@Test
+	@DisplayName("BMI con peso igual a 0")
 	public void bmiPeso0() {
 		BMICalcImpl a=new BMICalcImpl();
 		assertThrows(ArithmeticException.class,()->a.bmi(1,0));

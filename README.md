@@ -19,3 +19,37 @@ COmprobación en 25 salga OVERWEIGHT
 13.Comprobacion que con gender distinto de M y F nos devuelva un error
 14.Comprobacion que con un waistCircumference negativo nos devuelva un error
 
+#Diagrama UML
+
+<image src="C:\Users\raul\Desktop\Diagrama1.png" alt="Diagrama UML del modelo">
+El caso de uso que hemos añadido es un cálculo según la altura de la persona y su género de su IBM ideal.
+
+#Especificación de caso de uso
+Calcular categoría
+-Actor primario: Médico
+-Objetivo: Calcular la categoría que es un paciente(obeso, delgado...) a través 
+de una serie de valores.
+-Scope: Software informático para calcularlo
+-Level: Informar al paciente sobre a que categoría pertenece
+-Stakeholder e intereses:
+1. Médico: Infomar al paciente que categoría es
+2. Paciente: Saber a que categoría pertenece
+-Precondición: Que el médico conozca los parametros necesario(bmi) o los parámetros para 
+calcularlos para poder realizar el cálculo.
+-Garantía mínima: El médico recibe la información a partir del software para poder informar
+al paciente
+-Trigger: El médico selecciona la opción calcular categoría
+-Escenario principal:
+1. El médico inicia el software
+2. El médico selecciona la opción calcular categoría
+3. El médico introduce los parámetros(bmi)
+4. El sowtware le devuelve al médico el resultado
+-Escenarios alternativos:
+2a. El médico no conoce el bmi
+2b. El software da la opción de calcular bmi
+2c. El software calcula bmi.
+2d. El software calcula y devuelve la categoría
+3a. El médico introduce parámetros no reales(muy altos o muy bajos)
+3b. El software devuelve un error y vuelve a preguntar los parámetros
+
+
