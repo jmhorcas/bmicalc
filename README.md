@@ -3,6 +3,27 @@
 # BMI calculator
 A biomedical calculator for the body mass index (BMI) and other parameters.
 
+![Alt text](https://github.com/ElArquitectorgo/bmicalc/blob/main/doc/prueba.drawio.png)
+
+# Especificación caso de uso
+## Caso de uso: solicitar ayuda.
+Actor primario: cliente.
+Objetivo: que el cliente reciba la ayuda o indicaciones necesarias a seguir para mejorar su salud en función de la categoría en la que se encuentre su IMC.
+Scope: aplicación móvil.
+Nivel: objetivo del usuario.
+Stakeholders:
+	* cliente: quiere mejorar su salud
+	* desarrollador: desarrolla la aplicación
+Precondición: el cliente proporciona su peso y altura.
+Garantías mínimas: se muestra al menos un consejo para ayudar al cliente.
+Trigger: seleccionar botón “solicitar ayuda”.
+Escenario principal:
+1. el cliente calcula su IMC (Calcular IMC)
+2. el cliente busca la categoría a la que pertenece su IMC (Consultar categoría)
+3. se muestra información por pantalla con consejos nutricionales y/o deportivos acorde a la categoría del IMC indicado.
+Escenario alternativo:
+4. el usuario está en la categoría saludable y no se muestra ninguna recomendación.
+
 # Tests
 - underweightCategoryTest: comprueba con valores en rango que el resultado es correcto.
 - underweightNegativeCategoryTest: comprueba que con valores negativos se lanza una excepción.
@@ -23,5 +44,3 @@ A biomedical calculator for the body mass index (BMI) and other parameters.
 - bmiNegativeHeightTest: comprueba que se lanza una excepción con altura negativa.
 - bmiHeightEqualsToZeroTest: comprueba que en caso de dividir por cero se lanza una excepción.
 - bmiIrrealTest: comprueba que se lanza una excepción con una relación de peso altura irreal.
-
-![Alt text](https://github.com/ElArquitectorgo/bmicalc/blob/main/doc/prueba.drawio.png)
