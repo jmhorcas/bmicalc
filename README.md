@@ -1,4 +1,5 @@
-![example workflow](https://github.com/jmhorcas/bmicalc/actions/workflows/maven.yml/badge.svg)
+
+![UML diagram](https://github.com/claudiavegarodriguez/bmicalc/blob/main/doc/DiagramaUML.png)
 
 # BMI calculator
 A biomedical calculator for the body mass index (BMI) and other parameters.
