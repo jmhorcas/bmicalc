@@ -24,5 +24,4 @@ A biomedical calculator for the body mass index (BMI) and other parameters.
 - bmiHeightEqualsToZeroTest: comprueba que en caso de dividir por cero se lanza una excepción.
 - bmiIrrealTest: comprueba que se lanza una excepción con una relación de peso altura irreal.
 
-# To-do
-Mejorar los test
+![alt text](https://github.com/ElArquitectorgo/{bmicalc}/doc/prueba.drawio.png )
