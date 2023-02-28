@@ -13,7 +13,7 @@ Scope: aplicación móvil.\
 Nivel: objetivo del usuario.\
 Stakeholders:
 1. cliente: quiere mejorar su salud
-2. desarrollador: desarrolla la aplicación
+2. desarrollador: desarrolla la aplicación\
 Precondición: el cliente proporciona su peso y altura.\
 Garantías mínimas: se muestra al menos un consejo para ayudar al cliente.\
 Trigger: seleccionar botón “solicitar ayuda”.\
