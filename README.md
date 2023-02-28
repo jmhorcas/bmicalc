@@ -23,7 +23,7 @@ A biomedical calculator for the body mass index (BMI) and other parameters.
 2. El cliente busca la categoría a la que pertenece su IMC (Consultar categoría)
 3. Se muestra información por pantalla con consejos nutricionales y/o deportivos acorde a la categoría del IMC indicado.
 
-**Escenario alternativo:**
+**Escenario alternativo:**  
 4. El usuario está en la categoría saludable y no se muestra ninguna recomendación.
 
 # Tests
