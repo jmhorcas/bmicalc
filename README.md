@@ -37,3 +37,23 @@ A biomedical calculator for the body mass index (BMI) and other parameters.
 
 ![Diagrama](/doc/CasosDeUso.jpg)
 
+## Especificación de caso de uso
+Caso de uso: Calcular categoría
+Actor primario: Usuario
+Objetivo: El usuario recibe la categoría de su BMI
+Scope: El sistema de la calculadora
+Nivel: Objetivo del usuario
+Stakeholders e intereses:
+	- Usuario: quiere saber su categoría
+Precondición: el usuario accede a la opción de calcular categoría
+Garantía mínima: el usario recibe una categoría correspondiente a su BMI
+Trigger: el usuario selecciona la acción de calcular categoría
+Escenario principal:
+1.- El usuario introduce su BMI
+2.- La calculadora recibe el BMI introducido
+3.- La calculadora devuelve la categoría
+Escenarios alternativos:
+3a. El BMI introducido no es válido
+3a1. La calculadora muestra un mensaje de error.
+3a2. Vuelta al paso 1
+
