@@ -24,4 +24,4 @@ A biomedical calculator for the body mass index (BMI) and other parameters.
 3. `assertThrows(RuntimeException.class, () ->{test.abdominalObesity(23, 'c');});` Test if gender is male or female.
 
 ## Casos de uso
-![Diagrama casos de uso](Diagrama1.png)
+![Diagrama casos de uso](doc/Diagrama1.png)
