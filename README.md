@@ -45,3 +45,29 @@ For method abdominalObesity(waistCircunference, gender) we will have these diffe
 - waistCircunference equal to 80 and gender equal to 'F': we expect FALSE
 - waistCircunference equal to 81 and gender equal to 'F': we expect TRUE
 - waistCircunference equal to 90 and gender equal to 'F': we expect TRUE
+
+![Use Cases Diagram](https://github.com/pmgespina/bmicalc/blob/main/doc/P2_new_function.png)
+
+## Use Case Specification
+
+- Name: Calculate the Body Mass Index of a Person
+- Primary actor: the user of the calculator
+- Scope: the body mass index (BMI) calculator
+- Goal: the user wnats to calculate its body mass index
+- Level: user objective
+- Stakeholders and interests:
+    · User: calculate its body mass index
+    · Developers of the calculator: to provide a suitable solution for the request of the user
+- Precondition: the user has to introduce its mass and heigth
+- Minimal guarantee: the calculator returns a value of body mass index
+- Success guarantee: the user receives an suitable value of BMI value according to its mass and heigth
+- Trigger: the user selects the option "Calculate Body Mass Index" between the different options of the calculator
+- Main scenario:
+    1. User opens the calculator
+    2. User provides its mass and heigth (this point should be underlined because there is an use case that refers to this)
+    3. The calculator accepts the values which have been introduced
+    4. The calculator obtains the result of body mass index for the user
+    5. The calculator shows the result to the user
+- Alternative scenario:
+    2a. The mass value introduced by the user is invalid
+    2b. The heigth value introduced by the user is invalid
