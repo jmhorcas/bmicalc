@@ -1,0 +1,5 @@
+[User]-(Categorize a person according to the BMI)
+[User]-(Determine the ideal body fat percentage)
+[User]-(Calculate BMI)
+(Categorize a person according to the BMI)>(Calculate BMI)
+[User]-(Determine if a person has abdominal obsesity)

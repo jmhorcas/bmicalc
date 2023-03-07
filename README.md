@@ -42,3 +42,42 @@ that the limit is not include.
 
 13. This test check that the gender is correctly introduce (F or M).
 
+## Upload use case diagram as an image
+
+![Image text](/doc/casodeuso.jpg)
+
+## Use case
+
+USE CASE: Determine if a person has abdominal obsesity
+
+Primary Actor: User
+
+Scope: bmi calculator ("bmicalc")
+
+Level: User goal
+
+Stakerholders and Interests:
+
+User - want to do the operation of knowing if somebody has or not abdominal obsesity
+
+Precondition: the gender and waist circumference measurement are correctly introduced
+
+Minimal guarantee: the user get the result of the operation as true or false
+
+Trigger: select the operation "Determine if a person has abdominal obsesity"
+
+Main success scenario:
+
+1. User introduce the data (waist circumference measurement and gender as F (female) or M (male))
+	 
+2. The system confirm and do the operation
+	
+3. The system return the result of the operation as "true" or "false"
+	
+Alternate scenario:
+
+1a. Sumitted data is incorrect:the gender is not introduce as F or M
+	
+1b. The system return an error message
+	
+1c. back to step 1
