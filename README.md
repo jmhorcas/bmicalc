@@ -22,3 +22,6 @@ A biomedical calculator for the body mass index (BMI) and other parameters.
 1. `assertThrows(RuntimeException.class, () ->{test.abdominalObesity(-23, 'M');});` Test if an error message appears when waistCircumference is under 0.
 2. `assertThrows(RuntimeException.class, () ->{test.abdominalObesity(0, 'M');});` Test if an error message appears when waistCircumference is equal to 0.
 3. `assertThrows(RuntimeException.class, () ->{test.abdominalObesity(23, 'c');});` Test if gender is male or female.
+
+## Casos de uso
+<img src= "C:\Users\34684\Desktop\IngSalud\22-23\ISA\Prácticas\bmicalc\doc" alt="JuveR" width="300px">
