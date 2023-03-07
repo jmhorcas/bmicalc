@@ -25,3 +25,23 @@ A biomedical calculator for the body mass index (BMI) and other parameters.
 
 ## Casos de uso
 ![Diagrama casos de uso](doc/Diagrama1.png)
+
+### Calcular IMC
+- Actor primario: Paciente (usuario)
+- Objetivo: El paciente obtiene si está bajo de peso, normal, con sobrepeso u obeso.
+- Ámbito: Sistema del hospital
+- Nivel: Objetivo del usuario
+- Stakeholder e intereses: 
+    1. Paciente: interesado en saber su estado
+    2. Hospital: calcular rápidamente el IMC del paciente.
+-  Precondición: Conocer los datos de altura y peso del paciente.
+- Garantía mínima: Dar el cálculo del IMC
+- Trigger: Introducir los datos de altura y peso
+- Escenario principal: 
+    1. El paciente introduce su peso y altura
+    2. El sistema calcula el IMC 
+    3. El sistema devuelve al usuario el resultado 
+- Escenarios alternativos:
+    - 1a) El paciente introduce un peso o altura igual o menor a cero
+    - 1b) El sistema devuelve un mensaje de error
+    - 1c) Vuelta al paso 1.
