@@ -1,0 +1,115 @@
+Historia de usuario 1
+Como usuario con una calculadora de BMI
+Quiero poder calcular el BMI dada una altura y un peso
+Para saber conocer mi BMI
+
+	Escenario 1: Calcular el BMI con una altura y un peso positivos
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo el BMI con altura 2 m y con peso 50 kg
+	Entonces El sistema devuelve 12.5
+
+	Escenario 2: Calcular el BMI con una altura negativa
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo el BMI con altura -1 m y con peso 50 kg
+	Entonces El sistema devuelve un error
+
+	Escenario 3: Calcular el BMI con un peso negativo
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo el BMI con altura 1 m y con peso -1 kg
+	Entonces El sistema devuelve un error
+
+	Escenario 4: Calcular el BMI con una altura atípica 
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo el BMI con altura 5 m y con peso 10 kg
+	Entonces El sistema devuelve un error
+
+	Escenario 5: Calcular el BMI con un peso atípico
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo el BMI con altura 1 m y con peso 1000 kg
+	Entonces El sistema devuelve un error
+
+	Escenario 5: Calcular el BMI con una altura de cero
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo el BMI con altura 0 m y con peso 10 kg
+	Entonces El sistema devuelve un error
+
+	Escenario 6: Calcular el BMI con un peso cero
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo el BMI con altura 1 m y con peso 0 kg
+	Entonces El sistema devuelve un error
+	
+
+Historia de usuario 2
+Como usuario 
+Quiero poder calcular la categoría de un BMI
+Para saber cuál es mi categoría
+
+	Escenario 1: Calcular UNDERWEIGHT
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo la categoría del BMI 10
+	Entonces El sistema devuelve UNDERWEIGHT
+
+	Escenario 2: Calcular NORMAL
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo la categoría del BMI 20
+	Entonces El sistema devuelve NORMAL
+
+	Escenario 3: Calcular OVERRWEIGHT
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo la categoría del BMI 27
+	Entonces El sistema devuelve OVERWEIGHT
+
+	Escenario 4: Calcular OBESE
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo la categoría del BMI 35
+	Entonces El sistema devuelve OBESE
+
+	Escenario 5: El BMI introducido es negativo
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo la categoría del BMI -1
+	Entonces El sistema devuelve un error
+
+	Escenario 6: El BMI introducido es atípico
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo la categoría del BMI 200
+	Entonces El sistema devuelve un error
+
+Historia de usuario 3
+Como usuario
+Quiero poder calcular si hay obesidad abdominal
+Para conocer si tengo obesidad abdominal
+
+	Escenario 1: Una mujer tiene obesisad abdominal
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo la obesidad abdominal de F y 100 cm
+	Entonces El sistema devuelve true
+
+	Escenario 2: Una mujer no tiene obesisad abdominal
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo la obesidad abdominal de F y 60cm
+	Entonces El sistema devuelve false
+
+	Escenario 3: Un hombre tiene obesisad abdominal
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo la obesidad abdominal de M y 100 cm
+	Entonces El sistema devuelve true
+
+	Escenario 4: Un hombre no tiene obesisad abdominal
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo la obesidad abdominal de M y 60 cm
+	Entonces El sistema devuelve false
+
+	Escenario 5: El género no es válido
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo la obesidad abdominal de X y 100 cm
+	Entonces El sistema devuelve un error
+
+	Escenario 6: La circunferencia de la cintura es negativa
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo la obesidad abdominal de M y -20 cm
+	Entonces El sistema devuelve un error
+
+	Escenario 7: La circunferencia de la cintura es atípica
+	Dado Tengo una calculadora de BMI
+	Cuando Calculo la obesidad abdominal de M y 500 cm
+	Entonces El sistema devuelve un error
