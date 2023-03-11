@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="bmicalc.BMICalcTest" time="0.018" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="bmicalc.BMICalcTest" time="0.029" tests="35" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/susan/Desktop/Ing_sw/Practica_1/bmicalc/target/test-classes:/Users/susan/Desktop/Ing_sw/Practica_1/bmicalc/target/classes:/Users/susan/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1.jar:/Users/susan/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.jar:/Users/susan/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.jar:/Users/susan/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:"/>
+    <property name="java.class.path" value="/Users/susan/Desktop/Ing_sw/Practica_1/bmicalc/target/test-classes:/Users/susan/Desktop/Ing_sw/Practica_1/bmicalc/target/classes:/Users/susan/.m2/repository/io/cucumber/cucumber-java/7.0.0/cucumber-java-7.0.0.jar:/Users/susan/.m2/repository/io/cucumber/cucumber-core/7.0.0/cucumber-core-7.0.0.jar:/Users/susan/.m2/repository/io/cucumber/cucumber-gherkin/7.0.0/cucumber-gherkin-7.0.0.jar:/Users/susan/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.0.0/cucumber-gherkin-messages-7.0.0.jar:/Users/susan/.m2/repository/io/cucumber/messages/17.1.1/messages-17.1.1.jar:/Users/susan/.m2/repository/io/cucumber/tag-expressions/4.0.2/tag-expressions-4.0.2.jar:/Users/susan/.m2/repository/io/cucumber/cucumber-expressions/13.0.1/cucumber-expressions-13.0.1.jar:/Users/susan/.m2/repository/io/cucumber/datatable/7.0.0/datatable-7.0.0.jar:/Users/susan/.m2/repository/io/cucumber/cucumber-plugin/7.0.0/cucumber-plugin-7.0.0.jar:/Users/susan/.m2/repository/io/cucumber/docstring/7.0.0/docstring-7.0.0.jar:/Users/susan/.m2/repository/io/cucumber/html-formatter/17.0.0/html-formatter-17.0.0.jar:/Users/susan/.m2/repository/io/cucumber/create-meta/6.0.1/create-meta-6.0.1.jar:/Users/susan/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/susan/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.0.0/cucumber-junit-platform-engine-7.0.0.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/susan/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-suite/1.9.2/junit-platform-suite-1.9.2.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.2/junit-platform-suite-api-1.9.2.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.2/junit-platform-suite-commons-1.9.2.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/susan/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.2/junit-jupiter-5.9.2.jar:/Users/susan/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/susan/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.2/junit-jupiter-params-5.9.2.jar:/Users/susan/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/Madrid"/>
     <property name="os.name" value="Mac OS X"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/susan/Desktop/Ing_sw/Practica_1/bmicalc/target/surefire/surefirebooter-20230207140809849_3.jar /Users/susan/Desktop/Ing_sw/Practica_1/bmicalc/target/surefire 2023-02-07T14-08-07_663-jvmRun1 surefire-20230207140809849_1tmp surefire_0-20230207140809849_2tmp"/>
+    <property name="sun.java.command" value="/Users/susan/Desktop/Ing_sw/Practica_1/bmicalc/target/surefire/surefirebooter-20230311204129392_3.jar /Users/susan/Desktop/Ing_sw/Practica_1/bmicalc/target/surefire 2023-03-11T20-41-29_250-jvmRun1 surefire-20230311204129392_1tmp surefire_0-20230311204129392_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/susan/Desktop/Ing_sw/Practica_1/bmicalc/target/test-classes:/Users/susan/Desktop/Ing_sw/Practica_1/bmicalc/target/classes:/Users/susan/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1.jar:/Users/susan/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.jar:/Users/susan/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.jar:/Users/susan/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/susan/Desktop/Ing_sw/Practica_1/bmicalc/target/test-classes:/Users/susan/Desktop/Ing_sw/Practica_1/bmicalc/target/classes:/Users/susan/.m2/repository/io/cucumber/cucumber-java/7.0.0/cucumber-java-7.0.0.jar:/Users/susan/.m2/repository/io/cucumber/cucumber-core/7.0.0/cucumber-core-7.0.0.jar:/Users/susan/.m2/repository/io/cucumber/cucumber-gherkin/7.0.0/cucumber-gherkin-7.0.0.jar:/Users/susan/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.0.0/cucumber-gherkin-messages-7.0.0.jar:/Users/susan/.m2/repository/io/cucumber/messages/17.1.1/messages-17.1.1.jar:/Users/susan/.m2/repository/io/cucumber/tag-expressions/4.0.2/tag-expressions-4.0.2.jar:/Users/susan/.m2/repository/io/cucumber/cucumber-expressions/13.0.1/cucumber-expressions-13.0.1.jar:/Users/susan/.m2/repository/io/cucumber/datatable/7.0.0/datatable-7.0.0.jar:/Users/susan/.m2/repository/io/cucumber/cucumber-plugin/7.0.0/cucumber-plugin-7.0.0.jar:/Users/susan/.m2/repository/io/cucumber/docstring/7.0.0/docstring-7.0.0.jar:/Users/susan/.m2/repository/io/cucumber/html-formatter/17.0.0/html-formatter-17.0.0.jar:/Users/susan/.m2/repository/io/cucumber/create-meta/6.0.1/create-meta-6.0.1.jar:/Users/susan/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/susan/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.0.0/cucumber-junit-platform-engine-7.0.0.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/susan/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-suite/1.9.2/junit-platform-suite-1.9.2.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.2/junit-platform-suite-api-1.9.2.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.2/junit-platform-suite-commons-1.9.2.jar:/Users/susan/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/susan/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.2/junit-jupiter-5.9.2.jar:/Users/susan/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/susan/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.2/junit-jupiter-params-5.9.2.jar:/Users/susan/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/susan"/>
     <property name="user.language" value="es"/>
@@ -28,12 +29,12 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/susan/Desktop/Ing_sw/Practica_1/bmicalc/target/surefire/surefirebooter-20230207140809849_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/susan/Desktop/Ing_sw/Practica_1/bmicalc/target/surefire/surefirebooter-20230311204129392_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.5+8"/>
     <property name="user.name" value="susan"/>
     <property name="path.separator" value=":"/>
-    <property name="os.version" value="13.1"/>
+    <property name="os.version" value="13.2.1"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
@@ -53,5 +54,39 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="bmi" classname="bmicalc.BMICalcTest" time="0.011"/>
+  <testcase name="lowercaseMale" classname="bmicalc.BMICalcTest" time="0.005"/>
+  <testcase name="normalLBoundCheck" classname="bmicalc.BMICalcTest" time="0.001"/>
+  <testcase name="lowercaseFemale" classname="bmicalc.BMICalcTest" time="0.001"/>
+  <testcase name="bmiZeroHeight" classname="bmicalc.BMICalcTest" time="0.001"/>
+  <testcase name="boundaryF" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="boundaryM" classname="bmicalc.BMICalcTest" time="0.001"/>
+  <testcase name="underweightBoundCheck" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="bmiZeroWeight" classname="bmicalc.BMICalcTest" time="0.001"/>
+  <testcase name="abdObesityF" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="abdObesityM" classname="bmicalc.BMICalcTest" time="0.001"/>
+  <testcase name="normalUBoundCheck" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="overweightLBoundCheck" classname="bmicalc.BMICalcTest" time="0.001"/>
+  <testcase name="obeseBoundCheck" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="normalCheck" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="underweightCheck" classname="bmicalc.BMICalcTest" time="0.001"/>
+  <testcase name="bmiNegativeHeight" classname="bmicalc.BMICalcTest" time="0.001"/>
+  <testcase name="weightGreater" classname="bmicalc.BMICalcTest" time="0.001"/>
+  <testcase name="heightGreater" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="ZeroFemale" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="noAbdObesityF" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="noAbdObesityM" classname="bmicalc.BMICalcTest" time="0.001"/>
+  <testcase name="negativeBmi" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="bmiNegativeWeight" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="overweightCheck" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="negativeMale" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="overweightUBoundCheck" classname="bmicalc.BMICalcTest" time="0.001"/>
+  <testcase name="bmiBothCorrectBis" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="ZeroMale" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="invalidCharacter" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="wcGreaterFemale" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="OBESECheck" classname="bmicalc.BMICalcTest" time="0.001"/>
+  <testcase name="ZeroBmi" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="negativeFemale" classname="bmicalc.BMICalcTest" time="0"/>
+  <testcase name="wcGreaterMale" classname="bmicalc.BMICalcTest" time="0.001"/>
+  <testcase name="bmiBothCorrect" classname="bmicalc.BMICalcTest" time="0"/>
 </testsuite>

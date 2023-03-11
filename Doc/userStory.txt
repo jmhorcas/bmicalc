@@ -1,0 +1,108 @@
+User stories
+
+Feature: 
+
+As a [role]
+I want [sw feature]
+So that [benefit]
+
+Scenario: 
+Given [initial condition]
+When [events occur]
+Then [expected outcome]
+
+- Feature: Calculate BMI
+As a user
+I want to calculate my BMI 
+So that I will know if I have a healthy weight or not.
+
+Scenario 1: The weight is invalid
+Given that I want to calculate my BMI
+When I input a weight equal to -70
+Then the calculator shows an error message saying that the weight is invalid
+
+Scenario 2: The height is invalid
+Given that I enter an invalid height
+When I select the option to calculate my BMI
+Then the calculator shows an error message saying that the weight is invalid
+
+Scenario 3: Both values are correct
+Given that I enter weight = 60 and that I enter height = 1.68
+When I select the option to calculate my BMI
+Then the calculator gives me the value BMI = 21.258503401
+
+- Feature: Determine category
+As a user
+I want to determine my category according to my bmi.
+So that I will know if I am in a healthy category or not.
+
+Scenario 1: Underweight
+Given a user with a BMI value of 18.5
+When the user inputs their BMI value into the category determination feature
+Then the feature returns the category "underweight"
+
+Scenario 2: Normal
+Given a user with a BMI value of 23
+When the user inputs their BMI value into the category determination feature
+Then the feature returns the category "normal"
+
+Scenario 3: Overweight
+Given a user with a BMI value of 27
+When the user inputs their BMI value into the category determination feature
+Then the feature returns the category "overweight"
+
+Scenario 4: Obese
+Given a user with a BMI value of 32
+When the user inputs their BMI value into the category determination feature
+Then the feature returns the category "obese"
+
+These scenarios can be merged into one:
+
+Given a user with a BMI value of n
+When the user inputs their BMI value into the category determination feature
+Then the feature returns the category c
+n | c
+18.5 | UNDERWEIGHT
+23 | NORMAL
+27 | OVERWEIGHT
+32 | OBESE
+
+Error Scenarios:
+
+Given a user who inputs an invalid BMI value of -5
+When the user inputs their BMI value into the category determination feature
+Then the feature returns an error message "Invalid BMI value entered. Please enter a positive number."
+
+Given a user who inputs an invalid BMI value of "abcd"
+When the user inputs their BMI value into the category determination feature
+Then the feature returns an error message "Invalid BMI value entered. Please enter a numeric value."
+
+Given a user who inputs a BMI value outside the range of 10 to 60
+When the user inputs their BMI value into the category determination feature
+Then the feature returns an error message "BMI value entered is outside the acceptable range. Please enter a value between 10 and 60."
+
+Feature: Determine abdominal obesity
+
+As a user
+I want to determine if I have abdominal obesity according to my circumference waist and gender
+So that I will know whether I must change my diet and exercise.
+
+Scenario 1: Male with abdominal obesity
+Given a male user with a waist circumference of 95 cm
+When the user inputs their waist circumference and gender into the abdominal obesity determination feature
+Then the feature determines that the user has abdominal obesity and returns a message indicating this.
+
+Scenario 2: Female without abdominal obesity
+Given a female user with a waist circumference of 80 cm
+When the user inputs their waist circumference and gender into the abdominal obesity determination feature
+Then the feature determines that the user does not have abdominal obesity and returns a message indicating this
+
+Scenario 3: Wrong waist circumference value
+Given a user who wants to determine if has abdominal obesity
+When the user inputs their gender and a waist circumference of -5 cm into the abdominal obesity determination feature
+Then the feature returns an error message "Invalid waist circumference value"
+
+Scenario 4: Wrong gender
+Given a user who wants to determine if has abdominal obesity
+When the user inputs their waist circumference and gender value 's'
+Then the feature returns an error message "Invalid gender character"
