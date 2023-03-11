@@ -1,4 +1,4 @@
-package uma;
+package practica3;
 
 public interface BMICalc {
 	
@@ -35,4 +35,5 @@ public interface BMICalc {
 	 */
 	public boolean abdominalObesity(double waistCircumference, char gender);
 }
+
 

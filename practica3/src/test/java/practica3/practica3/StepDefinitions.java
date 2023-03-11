@@ -1,10 +1,10 @@
-package uma.uma;
+package practica3.practica3;
 
 import io.cucumber.java.en.*;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Assertions.*;
-import uma.BMICalcImpl;
+import practica3.BMICalcImpl;
 
 public class StepDefinitions {
 	private BMICalcImpl b;

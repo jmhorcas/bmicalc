@@ -1,4 +1,4 @@
-package uma;
+package practica3;
 
 public class BMICalcImpl implements BMICalc {
 
@@ -73,3 +73,4 @@ public class BMICalcImpl implements BMICalc {
 	}
 
 }
+
